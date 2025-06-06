@@ -1,0 +1,155 @@
+.container {
+  max-width: 1400px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* Header */
+.header {
+  padding: 20px 0;
+}
+
+.header-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-list {
+  display: flex !important;
+  gap: 30px;
+}
+
+.nav-link {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.header-btn {
+  padding: 12px 24px;
+  font-size: 18px;
+}
+
+.js-open-menu {
+  display: none;
+}
+
+/* Modal */
+ .modal-window {
+    max-width: 600px;
+    padding: 48px;
+    border-radius: 8px;
+  }
+
+  .modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .modal-input-wrap,
+  .wrap-modal-comment,
+  .checkboxes-modal {
+    width: 100%;
+  }
+
+  .modal-input,
+  .modal-comment {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .modal-btn {
+    margin-top: 16px;
+    width: 100%;
+    padding: 14px;
+    font-size: 17px;
+    font-weight: 600;
+  }
+
+  .checkboxes-wrap > label {
+    font-size: 16px;
+  }
+
+/* Hero */
+.swiper-slide img {
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .slide-text-wrap {
+    bottom: 15%;
+    left: 10%;
+    right: 10%;
+    max-width: 700px;
+    padding: 32px;
+    font-size: 18px;
+  }
+
+  .slide-title {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+
+  .slide-text {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .hero-button-container {
+    margin-top: 64px;
+  }
+
+  .hero-button {
+    font-size: 18px;
+    padding: 20px 100px;
+  }
+
+ /* About */
+ .about-title {
+    font-size: 36px; 
+    margin-bottom: 30px; 
+  }
+
+  .accordion-btn {
+    font-size: 20px; 
+    padding: 20px; 
+  }
+
+  .accordion-content p {
+    font-size: 18px; 
+    margin: 20px 0; 
+  }
+
+  .about-item {
+    margin-bottom: 20px; 
+  }
+
+  .about-wrap {
+    max-width: 1200px; 
+    margin: 0 auto; 
+  }
+
+/* Footer */
+.footer-copyright {
+    font-size: 18px; 
+    margin: 0;
+  }
+
+  .footer-container {
+    text-align: center;
+    padding: 0 30px; 
+  }
+
+  .footer {
+    padding: 30px 0; 
+    
+  }

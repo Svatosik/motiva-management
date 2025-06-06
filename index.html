@@ -1,13 +1,399 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Motiva</title>
+    <!-- Minimalization -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="./src/css/styles.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./src/css/desktop.css"
+      media="screen and (min-width: 1200px)"
+    />
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <!-- Header -->
+    <header class="header">
+      <div class="container header-wrap">
+        <nav class="header-nav">
+          <a
+            href="#"
+            class="header-logo link"
+            >MOTIVA</a
+          >
+          <ul class="nav-list list">
+            <li class="nav-item">
+              <a
+                href="#"
+                class="nav-link link"
+                >Tachospeed</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="#"
+                class="nav-link link"
+                >CRT Partner</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="#"
+                class="nav-link link"
+                >Vialtis</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="#"
+                class="nav-link link"
+                >Locktracker</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <button
+          class="header-btn"
+          data-modal-open
+        >
+          Zamów konsultację
+        </button>
+        <button
+          type="button"
+          class="header-menubtn js-open-menu"
+        >
+          <svg class="menubtn-svg">
+            <use href="./src/images/symbol-defs.svg#icon-nav-bar"></use>
+              <!-- ./images/symbol-defs.svg#icon-nav-bar -->
+            </use>
+          </svg>
+        </button>
+      </div>
+
+      <div class="menu js-menu-container container">
+        <div class="menu-top">
+          <a
+            href="#"
+            class="header-logo link"
+            >MOTIVA</a
+          >
+          <button
+            type="button"
+            class="menu-close js-close-menu"
+          >
+            <svg class="close-svg">
+              <use href="./src/images/symbol-defs.svg#icon-cross"></use>
+                <!-- ./images/symbol-defs.svg#icon-cross -->
+              </use>
+            </svg>
+          </button>
+        </div>
+        <ul class="menu-list list">
+          <li class="menu-item">
+            <a
+              href="#"
+              class="menu-link link"
+              >Tachospeed</a
+            >
+          </li>
+          <li class="menu-item">
+            <a
+              href="#"
+              class="menu-link link"
+              >CRT Partner</a
+            >
+          </li>
+          <li class="menu-item">
+            <a
+              href="#"
+              class="menu-link link"
+              >Vialtis</a
+            >
+          </li>
+          <li class="menu-item">
+            <a
+              href="#"
+              class="menu-link link"
+              >Locktracker</a
+            >
+        </ul>
+      </div>
+      <!-- Locktracker -->
+    </header>
+    <main>
+      <!-- Modal -->
+      <div
+        class="overlay is-hidden"
+        data-modal
+      >
+        <div class="modal-window">
+          <button
+            class="modal-close"
+            data-modal-close
+          >
+            <svg class="close-svg">
+              <use href="./src/images/symbol-defs.svg#icon-cross"></use>
+              <!-- ./images/symbol-defs.svg#icon-cross -->
+            </svg>
+          </button>
+          <p class="modal-title">Opuść kontakty, a my oddzwonimy</p>
+          <form
+            class="modal-form"
+            action="#"
+          >
+            <div class="modal-input-wrap">
+              <label
+                for="modal-name"
+                class="modal-label"
+                >Imię i Nazwisko</label
+              >
+              <input
+                type="text"
+                class="modal-input input"
+                id="modal-name"
+                name="username"
+                required
+              />
+            </div>
+            <div class="modal-input-wrap"><label
+              for="modal-phone"
+              class="modal-label"
+              >Telefon</label
+            >
+            <input
+              type="tel"
+              class="modal-input input"
+              id="modal-phone"
+              name="phone"
+              pattern="[0-9]{9}"
+              required
+            /></div>
+
+            
+            <div class="checkboxes-modal">
+              <p class="checkboxes-label">Wybierz jedną lub więcej opcji:</p>
+
+              <div class="checkboxes-wrap">
+                <input
+                  type="checkbox"
+                  id="karty"
+                  name="options"
+                  value="Karty paliwowe"
+                />
+                <label for="karty">Karty paliwowe</label>
+              </div>
+
+              <div class="checkboxes-wrap">
+                <input
+                  type="checkbox"
+                  id="czas-pracy"
+                  name="options"
+                  value="Rozliczanie czasu pracy kierowców"
+                />
+                <label for="czas-pracy"
+                  >Rozliczanie czasu pracy kierowców</label
+                >
+              </div>
+
+              <div class="checkboxes-wrap">
+                <input
+                  type="checkbox"
+                  id="vat"
+                  name="options"
+                  value="Zwrot podatku VAT"
+                />
+                <label for="vat">Zwrot podatku VAT</label>
+              </div>
+              <div class="checkboxes-wrap">
+                <input
+                  type="checkbox"
+                  id="system"
+                  name="options"
+                  value="Wiodący system zarządzania transportem"
+                />
+                <label for="system"
+                  >Wiodący system zarządzania transportem</label
+                >
+              </div>
+            </div>
+
+            <div class="wrap-modal-comment">
+              <label
+                for="modal-comment"
+                class="modal-label"
+                >Opis</label
+              >
+              <textarea
+                name="comment"
+                id="modal-comment"
+                class="modal-comment"
+                placeholder=""
+              ></textarea>
+            </div>
+            <button
+              class="modal-btn"
+              type="submit"
+            >
+              Wysłać
+            </button>
+          </form>
+        </div>
+      </div>
+      <!-- Hero -->
+      <section class="hero section">
+        <div class="container hero-wrap">
+          <div class="swiper-container hero-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  src="./src/images/mercedes-1.jpg"
+                  alt="Mercedes truck"
+                />
+                <div class="slide-text-wrap">
+                  <h1 class="slide-title">
+                    Czy Twoja firma transportowa płaci za dużo podatków?
+                  </h1>
+                  <p class="slide-text">
+                    Nie przepłacaj! Wiele firm transportowych traci tysiące
+                    złotych rocznie, bo nie wie o korzystnych warunkach
+                    podatkowych, jakie oferuje Lucky On Service i partnerzy.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./src/images/truck-2.jpg"
+                  alt="Lots of trucks"
+                />
+                <div class="slide-text-wrap">
+                  <h2 class="slide-title">
+                    A Ty? Możesz to zmienić już teraz!
+                  </h2>
+                  <p class="slide-text">
+                    Zarejestruj flotę w Motiva i płać jedne z
+                    najniższych podatków w Polsce! Więcej pieniędzy w firmie to
+                    większe możliwości – nowe pojazdy, lepsza infrastruktura,
+                    rozwój zespołu.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./src/images/logistics-3.jpg"
+                  alt="Logistics"
+                />
+                <div class="slide-text-wrap">
+                  <h2 class="slide-title">Co zyskujesz?</h2>
+                  <p class="slide-text">
+                    Realne oszczędności – płacisz mniej, zarabiasz więcej!
+                    <br />
+                    Gwarancja stabilnych stawek na 5 lat – planuj bez obaw!
+                    <br />
+                    Bezproblemowa rejestracja – my zajmujemy się
+                    formalnościami!<br />
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-button-container">
+            <button
+              class="hero-button"
+              data-modal-open
+            >
+              Zamów konsultację
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="about section">
+        <div class="container about-wrap">
+          <h2 class="about-title">Najczęściej zadawane pytania</h2>
+          <ul class="list about-list">
+            <li class="about-item">
+              <button class="accordion-btn link">
+                Czy Twoja firma transportowa płaci za dużo podatków?
+              </button>
+              <div class="accordion-content">
+                <p>
+                  Nie przepłacaj! Wiele firm transportowych traci tysiące
+                  złotych rocznie, bo nie wie o korzystnych warunkach
+                  podatkowych, jakie oferuje Lucky On Service i partnerzy.
+                </p>
+              </div>
+            </li>
+            <li class="about-item">
+              <button class="accordion-btn link">
+                Masz dość niepewności co do lokalizacji swojej floty?
+              </button>
+              <div class="accordion-content">
+                <p>
+                  Nasz System GPS dla firm zapewnia śledzenie w czasie
+                  rzeczywistym, optymalizację tras i wyższy poziom
+                  bezpieczeństwa – wszystko w jednym inteligentnym narzędziu!
+                </p>
+              </div>
+            </li>
+            <li class="about-item">
+              <button class="accordion-btn link">
+                Dlaczego ewidencja czasu pracy jest tak ważna?
+              </button>
+              <div class="accordion-content">
+                <p>
+                  Wynagrodzenie Twoich kierowców jest obliczane na podstawie
+                  raportu ewidencji. Nie wystarczą przejechane kilometry czy
+                  ilość frachtów. Tylko na podstawie rzetelnej i poprawnie
+                  przeprowadzonej ewidencji czasu pracy można sporządzić listę
+                  płac.
+                </p>
+              </div>
+            </li>
+            <li class="about-item">
+              <button class="accordion-btn link">
+                Na czym polega karta paliwowa?
+              </button>
+              <div class="accordion-content">
+                <p>
+                  Karta paliwowa to rozwiązanie, dzięki któremu nie musisz mieć
+                  przy sobie gotówki ani karty płatnicznej aby zatankować swój
+                  pojazd. Wszystkie transakcje są rejestrowane i dostępne w
+                  Panelu Klienta. Dzięki temu wiesz dokładnie który pojazd
+                  tankował, jaką ilość paliwa oraz kiedy.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <section class="container footer-container">
+        <p class="footer-copyright">&copy; 2025 MOTIVA. All rights reserved.</p>
+      </section>
+    </footer>
+    <script
+      type="module"
+      src="./src/js/index.js"
+    ></script>
   </body>
 </html>
