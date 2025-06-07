@@ -1,9 +1,14 @@
+body{
+  padding-top: 110px;
+}
 .container {
   max-width: 1400px;
   padding-left: 30px;
   padding-right: 30px;
 }
-
+.hero{
+  padding-top: 0;
+}
 /* Header */
 .header {
   padding: 20px 0;
@@ -46,11 +51,13 @@
     padding: 48px;
     border-radius: 8px;
   }
-
+  .modal-close{
+    top: 15px;
+    right: 20px;
+  }
   .modal-form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
   }
 
   .modal-input-wrap,
@@ -73,6 +80,7 @@
     font-size: 17px;
     font-weight: 600;
   }
+  
 
   .checkboxes-wrap > label {
     font-size: 16px;
@@ -138,6 +146,165 @@
     margin: 0 auto; 
   }
 
+/* Tachospeed */
+
+.tachospeed.section {
+  background: linear-gradient(90deg, #fff 55%, #f6f8fb 100%);
+  padding: 60px 0;
+}
+
+.container.tachospeed-wrap {
+  padding: 0 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+}
+
+/* Wrap all content inside a .tachospeed-content div for left side */
+.tachospeed-content {
+  flex: 1 1 54%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 700px;
+}
+
+.tachospeed-logo {
+  width: 210px;
+  margin-bottom: 18px;
+}
+
+.tachospeed-title {
+  font-size: 2.55rem;
+  margin-bottom: 30px;
+  line-height: 1.1;
+  max-width: 600px;
+}
+
+.tachospeed-list {
+  margin-bottom: 36px;
+}
+
+.tachospeed-item {
+  font-size: 1.17rem;
+  padding: 14px 0;
+}
+
+.tachospeed-text {
+  font-size: 1.09rem;
+  line-height: 1.45;
+  margin-left: 38px;
+}
+
+.tachospeed-item .tachospeed-text:before {
+  width: 20px;
+  height: 20px;
+  left: -38px;
+  top: 2px;
+}
+
+.tachospeed-stat {
+  margin-top: 24px;
+}
+
+.tachospeed-stat-list {
+  flex-direction: row;
+  gap: 64px;
+  width: auto;
+}
+
+.tachospeed-stat-item {
+  align-items: center;
+}
+
+.tachospeed-stat-number {
+  font-size: 2.1rem;
+  margin-bottom: 3px;
+}
+
+.tachospeed-stat-text {
+  font-size: 1.13rem;
+}
+
+/* CRT Partner */
+
+.container.crt-partner-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.crt-partner-main-content-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.crt-parner-logo-title-wrap{
+  display: block;
+}
+.crt-partner-logo {
+  width: 180px;
+  margin-bottom: 40px;
+}
+
+.crt-partner-title {
+  font-size: 3.5rem;
+  text-align: left;
+  margin-bottom: 32px;
+  line-height: 1.1;
+  max-width: 600px;
+}
+
+.crt-partner-btn {
+  font-size: 1.1rem;
+  padding: 14px 32px;
+  border-radius: 50px;
+  margin-bottom: 48px;
+  width: auto;
+}
+
+.crt-partner-cards {
+  width: 100%;
+  max-width: 560px;
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+.crt-partner-list {
+  width: 100%;
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 1px solid #e3e3e3;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 24px;
+}
+
+.crt-partner-item {
+  flex: 0 1 auto;
+  padding: 0;
+  border-bottom: none;
+}
+
+.crt-partner-item:last-child:nth-child(odd) {
+  flex-basis: auto;
+}
+
+.crt-partner-svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+}
+
+.crt-partner-text {
+  font-size: 1rem;
+  font-weight: 400;
+}
 /* Footer */
 .footer-copyright {
     font-size: 18px; 

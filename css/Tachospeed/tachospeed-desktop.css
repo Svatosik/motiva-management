@@ -1,0 +1,35 @@
+/* Header */
+.header {
+    padding: 20px 0;
+  }
+  
+  .header-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .header-nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .nav-list {
+    display: flex !important;
+    gap: 30px;
+  }
+  
+  .nav-link {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .header-btn {
+    padding: 12px 24px;
+    font-size: 18px;
+  }
+  
+  .js-open-menu {
+    display: none;
+  }
