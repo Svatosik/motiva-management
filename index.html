@@ -22,11 +22,11 @@
 
     <link
       rel="stylesheet"
-      href="./src/css/styles.css"
+      href="/css/styles.css"
     />
     <link
       rel="stylesheet"
-      href="./src/css/desktop.css"
+      href="/css/desktop.css"
       media="screen and (min-width: 1200px)"
     />
   </head>
@@ -36,21 +36,21 @@
       <div class="container header-wrap">
         <nav class="header-nav">
           <a
-            href="#"
+            href="/motiva-management/index.html"
             class="header-logo link"
             >MOTIVA</a
           >
           <ul class="nav-list list">
             <li class="nav-item">
               <a
-                href="#"
+                href="#tachospeed"
                 class="nav-link link"
                 >Tachospeed</a
               >
             </li>
             <li class="nav-item">
               <a
-                href="#"
+                href="#crt-partner"
                 class="nav-link link"
                 >CRT Partner</a
               >
@@ -59,14 +59,14 @@
               <a
                 href="#"
                 class="nav-link link"
-                >Vialtis</a
+                >Locktracker</a
               >
             </li>
             <li class="nav-item">
               <a
                 href="#"
                 class="nav-link link"
-                >Locktracker</a
+                >Vialtis</a
               >
             </li>
           </ul>
@@ -82,9 +82,7 @@
           class="header-menubtn js-open-menu"
         >
           <svg class="menubtn-svg">
-            <use href="./src/images/symbol-defs.svg#icon-nav-bar"></use>
-              <!-- ./images/symbol-defs.svg#icon-nav-bar -->
-            </use>
+            <use href="/images/symbol-defs.svg#icon-nav-bar"></use>
           </svg>
         </button>
       </div>
@@ -92,7 +90,7 @@
       <div class="menu js-menu-container container">
         <div class="menu-top">
           <a
-            href="#"
+            href="/motiva-management/index.html"
             class="header-logo link"
             >MOTIVA</a
           >
@@ -101,25 +99,30 @@
             class="menu-close js-close-menu"
           >
             <svg class="close-svg">
-              <use href="./src/images/symbol-defs.svg#icon-cross"></use>
-                <!-- ./images/symbol-defs.svg#icon-cross -->
-              </use>
+              <use href="/images/symbol-defs.svg#icon-cross"></use>
             </svg>
           </button>
         </div>
         <ul class="menu-list list">
           <li class="menu-item">
             <a
-              href="#"
+              href="#tachospeed"
               class="menu-link link"
               >Tachospeed</a
             >
           </li>
           <li class="menu-item">
             <a
-              href="#"
+              href="#crt-partner"
               class="menu-link link"
               >CRT Partner</a
+            >
+          </li>
+          <li class="menu-item">
+            <a
+              href="#"
+              class="menu-link link"
+              >Locktracker</a
             >
           </li>
           <li class="menu-item">
@@ -129,15 +132,8 @@
               >Vialtis</a
             >
           </li>
-          <li class="menu-item">
-            <a
-              href="#"
-              class="menu-link link"
-              >Locktracker</a
-            >
         </ul>
       </div>
-      <!-- Locktracker -->
     </header>
     <main>
       <!-- Modal -->
@@ -151,8 +147,7 @@
             data-modal-close
           >
             <svg class="close-svg">
-              <use href="./src/images/symbol-defs.svg#icon-cross"></use>
-              <!-- ./images/symbol-defs.svg#icon-cross -->
+              <use href="/images/symbol-defs.svg#icon-cross"></use>
             </svg>
           </button>
           <p class="modal-title">Opuść kontakty, a my oddzwonimy</p>
@@ -174,21 +169,52 @@
                 required
               />
             </div>
-            <div class="modal-input-wrap"><label
-              for="modal-phone"
-              class="modal-label"
-              >Telefon</label
-            >
-            <input
-              type="tel"
-              class="modal-input input"
-              id="modal-phone"
-              name="phone"
-              pattern="[0-9]{9}"
-              required
-            /></div>
+            <div class="modal-input-wrap">
+              <label
+                for="modal-phone"
+                class="modal-label"
+                >Telefon</label
+              >
+              <input
+                type="tel"
+                class="modal-input input"
+                id="modal-phone"
+                name="phone"
+                pattern="[0-9]{9}"
+                required
+              />
+            </div>
+            <div class="modal-input-wrap">
+              <label
+                for="modal-company"
+                class="modal-label"
+                >Nazwa Firmy</label
+              >
+              <input
+                type="text"
+                class="modal-input input"
+                id="modal-company"
+                name="company"
+                required
+              />
+            </div>
+            <div class="modal-input-wrap">
+              <label
+                for="modal-nip"
+                class="modal-label"
+                >Nip</label
+              >
+              <input
+                type="text"
+                class="modal-input input"
+                id="modal-nip"
+                name="nip"
+                pattern="^\d{3}-?\d{3}-?\d{2}-?\d{2}$"
+                title="NIP musi składać się z 10 cyfr, np. 1234567890 lub 123-456-32-18"
+                required
+              />
+            </div>
 
-            
             <div class="checkboxes-modal">
               <p class="checkboxes-label">Wybierz jedną lub więcej opcji:</p>
 
@@ -265,7 +291,7 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <img
-                  src="./src/images/mercedes-1.jpg"
+                  src="/images/mercedes-1.jpg"
                   alt="Mercedes truck"
                 />
                 <div class="slide-text-wrap">
@@ -275,13 +301,13 @@
                   <p class="slide-text">
                     Nie przepłacaj! Wiele firm transportowych traci tysiące
                     złotych rocznie, bo nie wie o korzystnych warunkach
-                    podatkowych, jakie oferuje Lucky On Service i partnerzy.
+                    podatkowych, jakie oferuje Motiva i partnerzy.
                   </p>
                 </div>
               </div>
               <div class="swiper-slide">
                 <img
-                  src="./src/images/truck-2.jpg"
+                  src="/images/truck-2.jpg"
                   alt="Lots of trucks"
                 />
                 <div class="slide-text-wrap">
@@ -289,16 +315,16 @@
                     A Ty? Możesz to zmienić już teraz!
                   </h2>
                   <p class="slide-text">
-                    Zarejestruj flotę w Motiva i płać jedne z
-                    najniższych podatków w Polsce! Więcej pieniędzy w firmie to
-                    większe możliwości – nowe pojazdy, lepsza infrastruktura,
-                    rozwój zespołu.
+                    Zarejestruj flotę w Motiva i płać jedne z najniższych
+                    podatków w Polsce! Więcej pieniędzy w firmie to większe
+                    możliwości – nowe pojazdy, lepsza infrastruktura, rozwój
+                    zespołu.
                   </p>
                 </div>
               </div>
               <div class="swiper-slide">
                 <img
-                  src="./src/images/logistics-3.jpg"
+                  src="images/logistics-3.jpg"
                   alt="Logistics"
                 />
                 <div class="slide-text-wrap">
@@ -314,6 +340,11 @@
                 </div>
               </div>
             </div>
+            <!-- If we need navigation buttons -->
+            <!-- <div class="buttons-container">
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+             </div> -->
           </div>
           <div class="hero-button-container">
             <button
@@ -325,7 +356,7 @@
           </div>
         </div>
       </section>
-
+      <!-- About US -->
       <section class="about section">
         <div class="container about-wrap">
           <h2 class="about-title">Najczęściej zadawane pytania</h2>
@@ -338,7 +369,7 @@
                 <p>
                   Nie przepłacaj! Wiele firm transportowych traci tysiące
                   złotych rocznie, bo nie wie o korzystnych warunkach
-                  podatkowych, jakie oferuje Lucky On Service i partnerzy.
+                  podatkowych, jakie oferuje Motiva i partnerzy.
                 </p>
               </div>
             </li>
@@ -386,6 +417,126 @@
         </div>
       </section>
     </main>
+    <!-- Tachospeed -->
+    <section class="tachospeed section" id="tachospeed">
+      <div class="container tachospeed-wrap">
+        <img
+          src="/images/tachospeed_logo.png"
+          alt="Tachospeed logo"
+          class="tachospeed-logo"
+        />
+        <h2 class="tachospeed-title">
+          to więcej niż narzędzie do rozliczania czasu pracy kierowców
+        </h2>
+        <ul class="tachospeed-list">
+          <li class="tachospeed-item">
+            <p class="tachospeed-text">
+              Eksperci w zasięgu ręki – otrzymujesz pełne wsparcie do programu
+            </p>
+          </li>
+          <li class="tachospeed-item">
+            <p class="tachospeed-text">
+              Dopasowane do Twoich potrzeb – aktualizacje to nie tylko zmiany w
+              przepisach, to również dostosowanie do oczekiwań użytkowników
+            </p>
+          </li>
+          <li class="tachospeed-item">
+            <p class="tachospeed-text">
+              Indywidualne podejście do klienta – bezpośrednie połączenie z
+              opiekunem
+            </p>
+          </li>
+          <li class="tachospeed-item">
+            <p class="tachospeed-text">
+              Brak zobowiązań, pełna swoboda – testuj wersję demo bez
+              dodatkowych formalności.
+            </p>
+          </li>
+          <li class="tachospeed-item">
+            <p class="tachospeed-text">
+              Doświadczenie we współpracy z firmami rozliczającymi i służbami
+              kontrolnymi – narzędzie dopasowanie do potrzeb obu stron
+            </p>
+          </li>
+        </ul>
+        <div class="tachospeed-stat">
+          <ul class="tachospeed-stat-list">
+            <li class="tachospeed-stat-item">
+              <p class="tachospeed-stat-number">25,127</p>
+              <p class="tachospeed-stat-text">Sprzedanych Licencji</p>
+            </li>
+            <li class="tachospeed-stat-item">
+              <p class="tachospeed-stat-number">22</p>
+              <p class="tachospeed-stat-text">Instytucji kontrolnych</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- CRT Partner -->
+    <section class="crt-partner section" id="crt-partner">
+      <div class="container crt-partner-wrap">
+        <div class="crt-partner-main-content-wrap">
+          <div class="crt-parner-logo-title-wrap">
+            <img
+              src="/images/CRT_Partner_logo.png"
+              alt="CRT Partner logo"
+              class="crt-partner-logo"
+            />
+            <h2 class="crt-partner-title">
+              Jedna karta do płacenia za paliwo w całej Europie
+            </h2>
+            <button
+              class="crt-partner-btn"
+              data-modal-open
+            >
+              Dowiedz się więcej
+            </button>
+          </div>
+          <div class="crt-partner-card-wrap">
+            <img
+            src="/images/motiva-cards.png"
+            alt="Motiva cards"
+            class="crt-partner-cards"
+          />
+          </div>
+        </div>
+        <ul class="crt-partner-list">
+          <li class="crt-partner-item">
+            <svg class="crt-partner-svg">
+              <use href="/images/symbol-defs.svg#icon-card"></use>
+            </svg>
+            <p class="crt-partner-text">Fuel card</p>
+          </li>
+          <li class="crt-partner-item">
+            <svg class="crt-partner-svg">
+              <use href="/images/symbol-defs.svg#icon-laptop"></use>
+            </svg>
+            <p class="crt-partner-text">Self-service platform</p>
+          </li>
+          <li class="crt-partner-item">
+            <svg class="crt-partner-svg">
+              <use href="/images/symbol-defs.svg#icon-park"></use>
+            </svg>
+            <p class="crt-partner-text">Parking lots</p>
+          </li>
+          <li class="crt-partner-item">
+            <svg class="crt-partner-svg">
+              <use href="/images/symbol-defs.svg#icon-phone"></use>
+            </svg>
+            <p class="crt-partner-text">Mobile app</p>
+          </li>
+          <li class="crt-partner-item">
+            <svg class="crt-partner-svg">
+              <use href="/images/symbol-defs.svg#icon-road"></use>
+            </svg>
+            <p class="crt-partner-text">Road tolls</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
       <section class="container footer-container">
         <p class="footer-copyright">&copy; 2025 MOTIVA. All rights reserved.</p>

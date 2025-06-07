@@ -39,6 +39,9 @@ img {
   max-width: 100%;
   height: auto;
 }
+body{
+  padding-top: 84px;
+}
 .list {
   list-style: none;
 }
@@ -66,6 +69,10 @@ img {
 .header {
   background-color: var(--background-color-header);
   width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
 }
 .header-wrap {
   display: flex;
@@ -237,7 +244,7 @@ img {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  z-index: 2;
+  z-index: 1000;
 }
 
 /* Show Modal */
@@ -261,7 +268,7 @@ img {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  padding: 72px 24px 24px;
+  padding: 50px 24px 24px;
   display: flex;
   flex-direction: column;
   transition: all 0.7s ease;
@@ -281,7 +288,7 @@ img {
 .modal-close {
   position: absolute;
   top: 15px;
-  right: 20px;
+  right: 15px;
   border: none;
   display: flex;
   align-items: center;
@@ -325,10 +332,10 @@ img {
   padding: 12px;
   background-color: black;
   color: white;
-  border: 2px solid black;
   font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
+  border-radius: 8px;
 }
 .modal-comment {
   width: 99%;
@@ -425,6 +432,234 @@ About */
   border-bottom: 2px solid #444;
 }
 
+
+/* Tachospeed */
+
+.tachospeed.section {
+  background: #fff;
+}
+
+.container.tachospeed-wrap {
+  padding: 0 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tachospeed-logo {
+  width: 170px;
+  height: auto;
+  margin-bottom: 14px;
+  display: block;
+}
+
+.tachospeed-title {
+  color: #3d408f;
+  font-size: 1.45rem;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 20px;
+  line-height: 1.15;
+  letter-spacing: 0;
+}
+
+.tachospeed-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+  width: 100%;
+}
+
+.tachospeed-item {
+  display: flex;
+  align-items: flex-start;
+  font-size: 1rem;
+  padding: 12px 0;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.tachospeed-item:last-child {
+  border-bottom: none;
+}
+
+.tachospeed-text {
+  position: relative;
+  flex: 1;
+  color: #222;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-left: 32px;
+}
+
+.tachospeed-item .tachospeed-text:before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: -32px;
+  top: 2px;
+  background: url('data:image/svg+xml;utf8,<svg fill="red" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="red"/><path d="M10.5 16l-4-4 1.4-1.4L10.5 13.2l5.6-5.6L17.5 9z" fill="white"/></svg>') no-repeat center center/contain;
+}
+
+.tachospeed-item .tachospeed-text strong,
+.tachospeed-item .tachospeed-text b {
+  font-weight: 700;
+  color: #e30613;
+}
+
+.tachospeed-stat {
+  width: 100%;
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+.tachospeed-stat-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tachospeed-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tachospeed-stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #3d408f;
+  margin-bottom: 2px;
+  line-height: 1;
+}
+
+.tachospeed-stat-text {
+  font-size: 1.05rem;
+  color: #8d8d8d;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+/* CRT PARTNER */
+
+.crt-partner.section {
+  background: #fff;
+  color: #111;
+}
+
+.container.crt-partner-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.crt-partner-main-content-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.crt-parner-logo-title-wrap{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.crt-partner-logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.crt-partner-title {
+  color: #111;
+  font-size: 1.38rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 22px;
+  line-height: 1.15;
+  letter-spacing: 0;
+}
+
+.crt-partner-btn {
+  background: #fff;
+  border: 2px solid #111;
+  color: #111;
+  font-size: 1.04rem;
+  font-weight: 500;
+  border-radius: 24px;
+  padding: 10px 26px;
+  margin-bottom: 22px;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+  outline: none;
+  box-shadow: none;
+}
+.crt-partner-btn:hover,
+.crt-partner-btn:focus {
+  background: #111;
+  color: #fff;
+}
+
+.crt-partner-cards {
+  width: 180px;
+  height: auto;
+  margin-bottom: 22px;
+  display: block;
+}
+
+.crt-partner-list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 0;
+  justify-content: center;
+  border-top: 1px solid #e3e3e3;
+}
+
+.crt-partner-item {
+  flex: 0 0 50%;
+  display: flex;
+  align-items: center;
+  padding: 11px 0;
+  color: #111;
+}
+
+.crt-partner-svg {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  fill: #111;
+  stroke: #111;
+  display: inline-block;
+}
+
+.crt-partner-text {
+  font-size: 1.02rem;
+  color: #111;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+
+.crt-partner-item:last-child:nth-child(odd) {
+  flex-basis: 100%;
+  justify-content: center;
+}
+
+.crt-partner-btn, .crt-partner-item {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.crt-partner-btn:active {
+  outline: none;
+  box-shadow: none;
+}
 /* footer */
 
 .footer {
