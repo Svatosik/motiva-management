@@ -750,7 +750,7 @@ About */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding-bottom: 100px;
+  padding: 125px 0;
 }
 
 .vialtis.section::before {
