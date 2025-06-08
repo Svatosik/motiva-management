@@ -191,6 +191,7 @@ body{
 .swiper-slide img {
   object-fit: cover;
   height: 400px;
+  width: 100%;
 }
 
 .slide-text-wrap {
@@ -236,6 +237,9 @@ body{
 }
 /* Modal */
 
+body.no-scroll {
+  overflow: hidden;
+}
 /* Modal Overlay */
 .overlay {
   position: fixed;
@@ -268,7 +272,7 @@ body{
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  padding: 50px 24px 24px;
+  padding: 30px 24px 30px;
   display: flex;
   flex-direction: column;
   transition: all 0.7s ease;
@@ -279,7 +283,7 @@ body{
 .modal-title {
   font-size: 1.3em;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: #181818;
   text-align: center; /* Center the title */
 }
@@ -314,7 +318,7 @@ body{
 }
 
 .wrap-modal-comment {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   display: flex;
   flex-direction: column;
 }
@@ -337,14 +341,15 @@ body{
   transition: all 0.3s ease;
   border-radius: 8px;
 }
-.modal-comment {
+/* .modal-comment {
   width: 99%;
   border-radius: 4px;
   min-height: 100px;
-}
+} */
 .checkboxes-modal {
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
 }
 .checkboxes-label {
   font-size: 1em;
@@ -357,7 +362,7 @@ body{
   margin-bottom: 8px;
 }
 .checkboxes-wrap:last-child {
-  margin-bottom: none;
+  margin-bottom: 0;
 }
 .checkboxes-wrap > label {
   margin-left: 5px;
@@ -659,6 +664,135 @@ About */
 .crt-partner-btn:active {
   outline: none;
   box-shadow: none;
+}
+
+/* Loktracker */
+
+.loctracker.section {
+  background-image: url('../images/loctracker-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  color: #fff;
+}
+
+.loctracker.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(51, 0, 0, 0.9); /* Adjust the red overlay color and opacity */
+  z-index: 1;
+}
+
+.container.loctracker-wrap {
+  position: relative;
+  z-index: 2;
+}
+
+.loctracker-content-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.loctracker-logo {
+  width: 180px;
+  height: auto;
+  margin-bottom: 24px;
+  filter: brightness(1.2) contrast(1.1);
+}
+
+.loktracker-title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 32px;
+  color: #fff;
+}
+
+.loctracker-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.loctracker-item {
+  padding: 0;
+}
+
+.loctracker-item-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.loctracker-item-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #fff;
+  margin: 0;
+}
+
+/* Vialtis */
+.vialtis.section {
+  position: relative;
+  color: #fff;
+  background-image: url('../images/vialtis-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 100px;
+}
+
+.vialtis.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 82, 167, 0.3);  /* Adjust the red overlay color and opacity */
+  z-index: 1;
+}
+.container.vialtis-wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.vialtis-logo {
+  width: 140px;
+  height: auto;
+  margin: auto; /* Push logo to the right */
+  margin-bottom: 24px;
+}
+
+.vialtis-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  color: #fff;
+  max-width: 80%;
+}
+
+.vialtis-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #fff;
+  margin: 0;
+  max-width: 80%;
 }
 /* footer */
 
